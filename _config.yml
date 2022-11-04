@@ -4,8 +4,5 @@ markdown: kramdown
 highlighter: rouge
 permalink: pretty
 theme: lanyon
-
-# Title/ base
-name: Amy Andrews
 baseurl: 'myndrws.github.io'
 
