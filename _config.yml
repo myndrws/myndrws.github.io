@@ -3,41 +3,9 @@ exclude: []  # list files here when need excluding
 markdown: kramdown
 highlighter: rouge
 permalink: pretty
-theme: minima
-
-collections:
-  pages:
-    output: true
-    permalink: /:path/
+theme: lanyon
 
 # Title/ base
 name: Amy Andrews
 baseurl: 'myndrws.github.io'
 
-# Navigation
-# List links that should appear in the site sidebar here
-navigation:
-- text: Introduction
-  internal: true
-  url: ./
-- text: Add a new page
-  internal: true
-  url: add-a-new-page
-- text: Configure the Guide
-  internal: true
-  url: configure-the-guide
-- text: GitHub Setup
-  internal: true
-  url: github
-- text: Create a Glossary
-  glossary: true
-
-# Repo list
-# List repos that you would like to appear on the homepage here
-repos:
-- name: geo_gans
-  description: 
-  url: https://github.com/myndrws/geo_gans
-
-# Style Variables
-brand_color: "#DA253B"
