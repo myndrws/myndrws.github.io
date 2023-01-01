@@ -19,7 +19,7 @@ In the case of Auto disobeying a direct order from the captain of the ship, it b
 
 
 
-![A diagram of Auto's misalignment journey](walle-alignment.jpg "A diagram of Auto's misalignment journey")
+![A diagram of Auto's misalignment journey](/assets/img/walle-alignment.jpg) 
 
 *Showing three distinct phases since human's left Earth on board the Axiom. Note the subject-appropriate stars.*
 
