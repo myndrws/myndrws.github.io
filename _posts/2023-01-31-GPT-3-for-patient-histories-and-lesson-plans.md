@@ -44,7 +44,7 @@ I investigated whether `text-davinci-003`, the most capable GPT-3 model availabl
    </td>
   </tr>
   <tr>
-   <td>Two medical professionals
+   <td>Two doctors
    </td>
    <td>✔
    </td>
@@ -54,7 +54,7 @@ I investigated whether `text-davinci-003`, the most capable GPT-3 model availabl
    </td>
   </tr>
   <tr>
-   <td>One teacher
+   <td>Two teachers
    </td>
    <td>
    </td>
@@ -125,7 +125,7 @@ _Creating lesson plans_
 
 I used initial learnings from the writing of patient histories to make a better go at the input prompts for this task; for instance, using less fluffy or filler language. Thus the only thing that changed between prompts was the specification of the subject and the objective of the lesson. 
 
-In all of the responses, the model gave a clear ‘layout’ for the lesson plan - for instance, providing section headers and accompanying timings for each section. On two of the four tries, the model failed to make the sections add up to an hour - almost as though it was getting carried away. In two of the responses, the model provided a section on required materials.
+In all of the responses, the model gave a clear ‘layout’ for the lesson plan - for instance, providing section headers and accompanying timings for each section. On two of the four tries, the model failed to make the sections add up to an hour - almost as though it was getting carried away. Feedback from the teachers suggested that overall, the timings were unrealistic for seven year olds as given - this had not just to do with allocated time for activities, but the variation in activities, i.e. not just sitting and listening for 45 straight minutes,
 
 Each generated lesson plan result had its own flair, as would be the case between teachers, even though each prompt contained basically the same instructions. For instance, one lesson plan (from prompt three) explicitly laid out how to deal with differing abilities, a core prompt requirement; two outputs mentioned ability implicitly (outputs from prompt one and three), and the others ignored this. 
 
@@ -138,7 +138,7 @@ There are some impressive mentions of the objective in the lesson plans. Choice 
 * “20 minutes | Presenting the concept of conjunctions and how they are used to join two ideas together in a sentence. Introduce the list of conjunctions (and, but, or, so, because, etc.) and give examples of how they are used in sentences.”
 * “2. Each group will be given a set of skeletons (either from a book, poster, or 3D model) [...] asked to identify the different components of the skeleton, how it supports, moves, and protects”
 
-That said, most of the instructions remained pretty vague - for instance, the model seems to generally use worksheets as a ‘get out of jail free’ card, specifying that they should be used but not necessarily what they’re about. 
+That said, most of the instructions remained pretty vague - for instance, the model seems to generally use worksheets as a ‘get out of jail free’ card, specifying that they should be used but not necessarily what they’re about. Specifying only the objective of the lesson as a prompt was not enough to produce a detailed plan, particularly in developing underlying skills (such as the children conducting research themselves in science lessons) versus focusing only on the subject matter conveyed in the objective. This is something the teachers pointed out in their feedback.
 
 **New prompts based on learnings + OpenAI prompt design article**
 
