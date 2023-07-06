@@ -135,7 +135,7 @@ There are some impressive mentions of the objective in the lesson plans. Choice 
 
 * “Give each student a worksheet with a three digit number that they must identify and explain the place value of.”
 * “Ask the students to draw pictures of different objects. Once the pictures are finished, have them write a noun phrase to describe the picture”
-* “20 minutes | Presenting the concept of conjunctions and how they are used to join two ideas together in a sentence. Introduce the list of conjunctions (and, but, or, so, because, etc.) and give examples of how they are used in sentences.”
+* “20 minutes - Presenting the concept of conjunctions and how they are used to join two ideas together in a sentence. Introduce the list of conjunctions (and, but, or, so, because, etc.) and give examples of how they are used in sentences.”
 * “2. Each group will be given a set of skeletons (either from a book, poster, or 3D model) [...] asked to identify the different components of the skeleton, how it supports, moves, and protects”
 
 That said, most of the instructions remained pretty vague - for instance, the model seems to generally use worksheets as a ‘get out of jail free’ card, specifying that they should be used but not necessarily what they’re about. Specifying only the objective of the lesson as a prompt was not enough to produce a detailed plan, particularly in developing underlying skills (such as the children conducting research themselves in science lessons) versus focusing only on the subject matter conveyed in the objective. This is something the teachers pointed out in their feedback.
