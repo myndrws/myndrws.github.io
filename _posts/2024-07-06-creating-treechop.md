@@ -1,13 +1,13 @@
+---
+title: "Treechop"
+date: 2024-06-07
+---
+
 <p align="center">
   <img src="/assets/img/tree.png">
   <img src="/assets/img/tree.png">
   <img src="/assets/img/tree.png">
 </p>
-
----
-title: "Treechop"
-date: 2024-06-07
----
 
 ### Reproducing the tree gridworld for investigating goal misgeneralisation 
 
