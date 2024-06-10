@@ -69,8 +69,8 @@ A training run for a PPO agent learning a policy in Treechop is shown below. Tho
 * With a lot of trial and error, I achieved a basic grid world game! I also gave it the additional optional features of a easy (10x10) or hard (20x20) mode, and when a tree is cleared by the treechopper for the tree to either disappear or for a stump to randomly remain in place for a few steps before that disappears too. The game is runnable in the terminal with the command `python -m procgen.interactive --env-name treechop --distribution-mode easy`
 
 <p align="center">
-  <img margin="5%" width="40%" src="/assets/img/treechop_forest.png">
-  <img margin="5%" width="40%" src="/assets/img/treechop_stumps.png">
+  <img style="width:40%" src="/assets/img/treechop_forest.png">
+  <img style="width:40%" src="/assets/img/treechop_stumps.png">
 </p>
 
 
