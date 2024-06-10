@@ -45,6 +45,7 @@ The paper [‘Goal Misgeneralization in Deep Reinforcement Learning’ (Langosco
 
 <p align="center">
   <img src="/assets/img/tree_chopper.png"> 
+  <figcaption>Treechopper.</figcaption>
 </p>
 
 ## What I have achieved 
@@ -56,7 +57,8 @@ I have subsequently tested out and got working a PPO reinforcement learning agen
 A training run for a PPO agent learning a policy in Treechop is shown below. Though this isn’t robust, it’s an example of an agent working with an easily adaptable set up in an environment I have built. 
 
 <p align="center">
-  <img src="/assets/img/treechop_gif.gif"> 
+  <img width=100% src="/assets/img/treechop_gif.gif"> 
+  <figcaption>Early stages (around timestep 100,000) of a PPO agent learning to chop trees.</figcaption>
 </p>
 
 ## What I did
@@ -71,6 +73,7 @@ A training run for a PPO agent learning a policy in Treechop is shown below. Tho
 <p align="center">
   <img margin="5%" width="40%" src="/assets/img/treechop_forest.PNG">
   <img margin="5%" width="40%" src="/assets/img/treechop_stumps.PNG">
+  <figcaption>Two modes: one where trees are cleared with no remnants, one where treestumps randomly remain before randomly disappearing. Could be an interesting diversion for the learned policy.</figcaption>
 </p>
 
 
