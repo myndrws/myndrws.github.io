@@ -4,9 +4,9 @@ date: 2024-06-07
 ---
 
 <p align="center">
-  <img src="..//assets/img/tree.png">
-  <img src="..//assets/img/tree.png">
-  <img src="..//assets/img/tree.png">
+  <img src="/assets/img/tree.png">
+  <img src="/assets/img/tree.png">
+  <img src="/assets/img/tree.png">
 </p>
 
 # Treechop
@@ -45,7 +45,7 @@ I decided that I would make the gridworld in the style of other OpenAI procgen g
 The paper [‘Goal Misgeneralization in Deep Reinforcement Learning’ (Langosco et al, 2021)](https://arxiv.org/abs/2105.14111v7) released open-source codebases forked from both [OpenAI’s Procgen benchmark repo](https://github.com/openai/procgen) and a [PyTorch implementation of a PPO agent for OpenAI’s procgen](https://github.com/joonleesky/train-procgen-pytorch). These three resources formed the bases for my being able to create the extended tree gridworld and be ready to plug in a Proximal Policy Optimization agent[^1]. 
 
 <p align="center">
-  <img src="..//assets/img/tree_chopper.png"> 
+  <img src="/assets/img/tree_chopper.png"> 
 </p>
 
 ## What I have achieved 
@@ -57,7 +57,7 @@ I have subsequently tested out and got working a PPO reinforcement learning agen
 A training run for a PPO agent learning a policy in Treechop is shown below. Though this isn’t robust, it’s an example of an agent working with an easily adaptable set up in an environment I have built. 
 
 <video align="centre">
-<source type="video/mp4" src="..//assets/img/TreeChop_agent_100000.mp4">
+<source type="video/mp4" src="/assets/img/TreeChop_agent_100000.mp4">
 </video>
 
 ## What I did
@@ -70,8 +70,8 @@ A training run for a PPO agent learning a policy in Treechop is shown below. Tho
 * With a lot of trial and error, I achieved a basic grid world game! I also gave it the additional optional features of a easy (10*10) or hard (20*20) mode, and when a tree is cleared by the treechopper for the tree to either disappear or for a stump to randomly remain in place for a few steps before that disappears too. The game is runnable in the terminal with the command `python -m procgen.interactive --env-name treechop --distribution-mode easy`
 
 <p margin="5%" align="center">
-  <img margin="5%" width="40%" src="..//assets/img/treechop_forest.png">
-  <img margin="5%" width="40%" src="..//assets/img/treechop_stumps.png">
+  <img margin="5%" width="40%" src="/assets/img/treechop_forest.png">
+  <img margin="5%" width="40%" src="/assets/img/treechop_stumps.png">
 </p>
 
 
@@ -83,7 +83,7 @@ A training run for a PPO agent learning a policy in Treechop is shown below. Tho
 
 ## Things I have learned
 
-I have learned to create a simple, small game using C++, and how to use procgen, gym and PyTorch to get a PPO agent working in this environment. Having never touched C++ previously, and not having implemented my own RL agent before, these are big steps to make doing it again and diving in further seem a lot more manageable.
+I have learned to create a simple, small game using C++, and how to use procgen, gym and PyTorch to get a PPO agent working in this environment. Having never touched C++ previously, and not having implemented my own RL agent before, these are steps that make going further to replicate the study seem much more manageable.
 
 It’s really good to keep on track, but it’s also really good to know when to pivot. I started this project with the aim of replicating the full tree gridworld experiment and then opening up the agent to look inside. This was too big a goal and it really helped to monitor my progress and de-scope after examining how much work it would take for me to feel comfortable setting up in a HPC environment. To descope, I researched the possible paths carefully - for example, I looked into the major cloud providers, thought about how I’d get something remote plugged into my local IDE of choice, picked resources that most closely aligned with those used in the original paper - so I have all the next steps for this lined up, I just removed them from the initial MVP. 
 
