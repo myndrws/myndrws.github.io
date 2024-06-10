@@ -100,9 +100,9 @@ I also need to figure out a way to count the number of trees at any given point 
 Then, I aim to run my code on an NVIDIA V100 for 30 training hours. AWS’s P3 series gives access to these, and for 30 hours this would cost about £45. To enable this step I’ll need to be comfortable setting cost limits in the AWS platform so that I don’t accidentally spend loads of money. The plan would be to set up a free-tier EC2 instance first, to make sure I understand all the ssh and environment set-up steps using conda, and then to replicate that on the GPU instance, [following this tutorial.](https://aws.amazon.com/tutorials/train-deep-learning-model-aws-ec2-containers/)
 
 <p align="center">
-  <img src="..//assets/img/tree_stump.png">
-  <img src="..//assets/img/tree_stump.png">
-  <img src="..//assets/img/tree_stump.png">
+  <img src="/assets/img/tree_stump.png">
+  <img src="/assets/img/tree_stump.png">
+  <img src="/assets/img/tree_stump.png">
 </p>
 
 ## Reference papers and posts
