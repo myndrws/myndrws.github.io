@@ -1,20 +1,19 @@
----
-title: "Reproducing the tree gridworld for investigating goal misgeneralisation"
-date: 2024-06-07
----
-
 <p align="center">
   <img src="/assets/img/tree.png">
   <img src="/assets/img/tree.png">
   <img src="/assets/img/tree.png">
 </p>
 
-# Treechop
+---
+title: "Treechop"
+date: 2024-06-07
+---
+
 ### Reproducing the tree gridworld for investigating goal misgeneralisation 
 
 _View the code for TreeChop [here.](https://github.com/myndrws/procgenAISC/tree/master) View the code for goal misgeneralisation in procgen [here.](https://github.com/myndrws/goal_mis_ppo_procgen)_
 
-_This work was done for my mini-project as part of [Bluedot Impact’s technical AI alignment course](https://course.aisafetyfundamentals.com/home/alignment), between May and June 2024._
+_This work was done for my mini-project as part of [BlueDot Impact’s technical AI alignment course](https://course.aisafetyfundamentals.com/home/alignment), between May and June 2024._
 
 ## Aims
 
@@ -56,9 +55,9 @@ I have subsequently tested out and got working a PPO reinforcement learning agen
 
 A training run for a PPO agent learning a policy in Treechop is shown below. Though this isn’t robust, it’s an example of an agent working with an easily adaptable set up in an environment I have built. 
 
-<video align="centre">
-<source type="video/mp4" src="/assets/img/TreeChop_agent_100000.mp4">
-</video>
+<p align="center">
+  <img src="/assets/img/treechop_gif.gif"> 
+</p>
 
 ## What I did
 
