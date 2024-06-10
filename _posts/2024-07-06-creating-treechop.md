@@ -66,9 +66,9 @@ A training run for a PPO agent learning a policy in Treechop is shown below. Tho
 * I tested the installed procgen environments without agents, e.g. running `python -m procgen.interactive --env-name coinrun_aisc --level-seed 6`
 * I then set about making my own procgen game! I used bigfish.cpp as an initial template to start messing around in C++, having never used this language before. I designated the name of the tree gridworld to be ‘Treechop’. After messing around a bit, I realised that the miner.cpp game mechanics were much closer to what I wanted in the end product so I started again.
 * I made my own pixel art for the environment and figured out how to load these in. 
-* With a lot of trial and error, I achieved a basic grid world game! I also gave it the additional optional features of a easy (10*10) or hard (20*20) mode, and when a tree is cleared by the treechopper for the tree to either disappear or for a stump to randomly remain in place for a few steps before that disappears too. The game is runnable in the terminal with the command `python -m procgen.interactive --env-name treechop --distribution-mode easy`
+* With a lot of trial and error, I achieved a basic grid world game! I also gave it the additional optional features of a easy (10x10) or hard (20x20) mode, and when a tree is cleared by the treechopper for the tree to either disappear or for a stump to randomly remain in place for a few steps before that disappears too. The game is runnable in the terminal with the command `python -m procgen.interactive --env-name treechop --distribution-mode easy`
 
-<p margin="5%" align="center">
+<p align="center">
   <img margin="5%" width="40%" src="/assets/img/treechop_forest.png">
   <img margin="5%" width="40%" src="/assets/img/treechop_stumps.png">
 </p>
