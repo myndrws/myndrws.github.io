@@ -1,5 +1,3 @@
-#  
-
 ---
 title: "Building an Impact Assessment Assistant part 1: The problem and the RAG solution"
 date: 2025-12-11
@@ -11,7 +9,7 @@ date: 2025-12-11
 
 I’ve never had to write an Impact Assessment myself, but we knew directly from the expert economists who partnered with us on this project that they can be difficult to research and draft. 
 
-![Chatbot speech bubbles explaining Impact Assessments](/assets/img/p1_im1.jpg) 
+![Chatbot speech bubbles explaining Impact Assessments](/assets/img/p1_im1.png)
 
 *What is an Impact Assessment? As explained by our chatbot – it’s a systematic process used to evaluate the anticipated impacts of proposed legislation or regulatory measures. The primary purpose of an IA is to support the appraisal of new primary or secondary legislation by assessing the potential economic, social, and environmental effects of the proposal. We typically refer to an IA as the document capturing this process.*
 
@@ -21,7 +19,7 @@ Efficiently retrieving knowledge from legislative documents—often spanning hun
 
 We always intended to build a [Retrieval Augmented Generation](https://www.datacamp.com/blog/what-is-retrieval-augmented-generation-rag) (RAG) based solution to this problem. Back in spring 2024, this felt slightly more ground-breaking than it perhaps does now – but we’ve iterated a lot since then and made the solution robust.  
 
-![A diagram to explain RAG](/assets/img/p1_im2.jpg)
+![A diagram to explain RAG](/assets/img/p1_im2.png)
 *RAG - from chunking, to vectorising, to storing, to the user flow of asking, retrieving and recieving.*
 
 We aimed at a “naïve”1 RAG process, which roughly looked like: 
@@ -46,7 +44,7 @@ After weighing up several options for vector storage—including [Qdrant](https:
 
 A huge part of RAG design comes down to how you chunk up your data – that’s going to determine how useful it is to your end users. Just a sentence, and you’re going to find things that are very specific, but your vectorisation costs will soar. A whole page, and you’re looking at more false-positives and for users to have to search through a bunch of unrelated info. Impact assessments are also somewhat homogenous in format, and it makes sense to present those to users in a way that makes use of their heading-and-subheading structure. We landed on using the package [pymupdfLLM](https://pymupdf.readthedocs.io/en/latest/pymupdf4llm/), the best of the bunch without using a visual encoder of some sort, and a hierarchical chunking process, with custom-designed recursive re-merging of chunks if semantically it made sense to.
 
-![A mermaid diagram showing the logic flow of document chunking in our process.](/assets/img/p1_im3.jpg)
+![A mermaid diagram showing the logic flow of document chunking in our process.](/assets/img/p1_im3.png)
 *A mermaid diagram showing the logic flow of document chunking in our process.*
 
 We used the latest (cost-optimised) Azure OpenAI endpoints for vectorisation and for the LLM part of the process. One well-known challenge with using API models is that these can be deprecated and otherwise altered under-the-hood without any notice – something that we fully came up against when we noticed a degradation in the chatbot’s performance that we couldn’t explain with prompt design or RAG changes, but which was very stark in our RAGAS results. It’s very hard to prove conclusively, but we’re pretty sure a change in the underlying model prompting resulted in a worse performance – luckily, we were about to change the model anyway, but this certainly informed my own caution in using API models in the future. 
