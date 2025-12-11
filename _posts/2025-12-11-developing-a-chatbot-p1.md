@@ -46,7 +46,42 @@ After weighing up several options for vector storage—including [Qdrant](https:
 
 A huge part of RAG design comes down to how you chunk up your data – that’s going to determine how useful it is to your end users. Just a sentence, and you’re going to find things that are very specific, but your vectorisation costs will soar. A whole page, and you’re looking at more false-positives and for users to have to search through a bunch of unrelated info. Impact assessments are also somewhat homogenous in format, and it makes sense to present those to users in a way that makes use of their heading-and-subheading structure. We landed on using the package [pymupdfLLM](https://pymupdf.readthedocs.io/en/latest/pymupdf4llm/), the best of the bunch without using a visual encoder of some sort, and a hierarchical chunking process, with custom-designed recursive re-merging of chunks if semantically it made sense to.
 
-![A mermaid diagram showing the logic flow of document chunking in our process.](/assets/img/p1_im3.png)
+```mermaid
+flowchart TD
+    Start([Raw PDF Metadata + Markdown]) --> Clean["Clean Special Characters<br/>- Replace unicode bullets/dashes<br/>- Remove invalid UTF-8<br/>- Remove links"]
+    
+    Clean --> HeaderSplit["Split by Markdown Headers<br/>(#, ##, ###)"]
+    
+    HeaderSplit --> RecursiveSplit["Recursive Character Split<br/>Chunk size: 1500<br/>Overlap: 100"]
+    
+    RecursiveSplit --> MergeLoop{Iterate & Merge Chunks}
+    
+    MergeLoop --> CheckChunk[Check Each Chunk]
+    
+    CheckChunk --> Condition1{"Is chunk < 500 chars<br/>OR starts with pipe?"}
+    
+    Condition1 -->|Yes| MergeAction["Merge with<br/>Adjacent Chunk"]
+    Condition1 -->|No| KeepChunk[Keep Chunk]
+    
+    MergeAction --> UpdateCount[Update Chunk Count]
+    KeepChunk --> UpdateCount
+    
+    UpdateCount --> StableCheck{"Chunk count<br/>changed?"}
+    
+    StableCheck -->|Yes| MergeLoop
+    StableCheck -->|No| PostProcess[Post-Processing]
+    
+    PostProcess --> AddNewlines["Add newlines before/after<br/>table pipes"]
+    AddNewlines --> AddMetadata["Add Chunk Numbers<br/>& Document Metadata"]
+    
+    AddMetadata --> Final([Final Chunked Documents<br/>with Metadata])
+    
+    style Start fill:#e1f5ff,stroke:#333,stroke-width:2px,color:#000
+    style Final fill:#d4edda,stroke:#333,stroke-width:2px,color:#000
+    style MergeLoop fill:#fff3cd,stroke:#333,stroke-width:2px,color:#000
+    style Condition1 fill:#fff3cd,stroke:#333,stroke-width:2px,color:#000
+    style StableCheck fill:#fff3cd,stroke:#333,stroke-width:2px,color:#000
+```
 *A mermaid diagram showing the logic flow of document chunking in our process.*
 
 We used the latest (cost-optimised) Azure OpenAI endpoints for vectorisation and for the LLM part of the process. One well-known challenge with using API models is that these can be deprecated and otherwise altered under-the-hood without any notice – something that we fully came up against when we noticed a degradation in the chatbot’s performance that we couldn’t explain with prompt design or RAG changes, but which was very stark in our RAGAS results. It’s very hard to prove conclusively, but we’re pretty sure a change in the underlying model prompting resulted in a worse performance – luckily, we were about to change the model anyway, but this certainly informed my own caution in using API models in the future. 
