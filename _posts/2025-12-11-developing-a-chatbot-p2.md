@@ -3,7 +3,7 @@ title: "Building an Impact Assessment Assistant part 2: The UI and the UX"
 date: 2025-12-11
 ---
 
-### _My team recently launched an internal chatbot for colleagues to locate information from impact assessments and impact assessment guidance in a natural-language interface. As a technical lead on the development of this project, this is the second of three blog posts taking a deeper dive on the technical path that led us to deployment._ 
+_My team recently launched an internal chatbot for colleagues to locate information from impact assessments and impact assessment guidance in a natural-language interface. As a technical lead on the development of this project, this is the second of three blog posts taking a deeper dive on the technical path that led us to deployment._ 
 
 <div align="center">
   <img src="/assets/img/p2_im1.png" alt="Chatbot UI screenshots, before and after." width="800">
