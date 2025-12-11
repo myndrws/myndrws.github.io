@@ -3,7 +3,7 @@ title: "Building an Impact Assessment Assistant part 1: The problem and the RAG 
 date: 2025-12-11
 ---
 
-### _My team recently launched an internal chatbot for colleagues to locate information from impact assessments and impact assessment guidance in a natural-language interface. As a technical lead on the development of this project, this is the first of three blog posts taking a deeper dive on the technical path that led us to deployment._ 
+_My team recently launched an internal chatbot for colleagues to locate information from impact assessments and impact assessment guidance in a natural-language interface. As a technical lead on the development of this project, this is the first of three blog posts taking a deeper dive on the technical path that led us to deployment._ 
 
 ## The problem
 
