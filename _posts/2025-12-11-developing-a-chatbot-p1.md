@@ -9,7 +9,9 @@ date: 2025-12-11
 
 I’ve never had to write an Impact Assessment myself, but we knew directly from the expert economists who partnered with us on this project that they can be difficult to research and draft. 
 
-![Chatbot speech bubbles explaining Impact Assessments](/assets/img/p1_im1.png)
+<div align="center">
+  <img src="/assets/img/p1_im1.png" alt="Chatbot speech bubbles explaining Impact Assessments" width="800">
+</div>
 
 *What is an Impact Assessment? As explained by our chatbot – it’s a systematic process used to evaluate the anticipated impacts of proposed legislation or regulatory measures. The primary purpose of an IA is to support the appraisal of new primary or secondary legislation by assessing the potential economic, social, and environmental effects of the proposal. We typically refer to an IA as the document capturing this process.*
 
