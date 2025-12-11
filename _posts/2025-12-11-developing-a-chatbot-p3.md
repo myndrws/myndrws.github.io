@@ -3,7 +3,7 @@ title: "Building an Impact Assessment Assistant part 3: The evaluation"
 date: 2025-12-11
 ---
 
-### _My team recently launched an internal chatbot for colleagues to locate information from impact assessments and impact assessment guidance in a natural-language interface. As a technical lead on the development of this project, this is the third of three blog posts taking a deeper dive on the technical path that led us to deployment._ 
+_My team recently launched an internal chatbot for colleagues to locate information from impact assessments and impact assessment guidance in a natural-language interface. As a technical lead on the development of this project, this is the third of three blog posts taking a deeper dive on the technical path that led us to deployment._ 
 
 Our initial alpha deployment made use of the Azure tools we had available, specifically Azure Web Apps – to allow users in the department to interact with the chatbot for long enough to gather useful feedback. More recently, as the wider team moved over to employing AWS as standard, we also migrated the chatbot to an AWS architecture, but retained the Azure OpenAI model and AI Search endpoints. This is a hybrid approach that we may iterate further in the future, but given the evaluation of the chatbot so far, it made the most sense to retain what we had already shown with both automated evaluation and with users to be a useful product.  
 
