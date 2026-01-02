@@ -1,6 +1,11 @@
 # add theme
-title: Learning/Aligning
+title: Amy Andrews
 author: Amy Andrews
 theme: minima
 plugins:
   - jekyll-seo-tag
+
+# Minima social links
+github_username: myndrws
+linkedin_username: myndrws
+rss: rss
