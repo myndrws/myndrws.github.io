@@ -1,0 +1,11 @@
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  
+  // Convert Jekyll's code blocks to Mermaid format
+  document.querySelectorAll('pre.language-mermaid, code.language-mermaid').forEach((block) => {
+    const pre = block.tagName === 'PRE' ? block : block.parentElement;
+    pre.outerHTML = `<pre class="mermaid">${block.textContent}</pre>`;
+  });
+  
+  mermaid.initialize({ startOnLoad: true });
+</script>
